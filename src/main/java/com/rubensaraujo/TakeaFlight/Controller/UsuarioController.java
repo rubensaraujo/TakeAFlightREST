@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -47,11 +48,21 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/new")
-	public Usuario createUser(@Valid Usuario user) {
+	public ModelAndView createUser(@Valid Usuario user, BindingResult bindingRes) {
 	    user.setAtivo(true);
 	    user.setSenha(passwordEncoder.encode(user.getSenha()));
+	    ModelAndView modView = new ModelAndView();
+	    if(bindingRes.hasErrors()) {
+	    	modView.setViewName("registration");
+	    }
+	    else {
+	    	userRepository.save(user);
+	    	modView.addObject("successMessage", "Usuário cadastrado!");
+			modView.addObject("usuario", new Usuario());
+			modView.setViewName("registration");
+	    }
 	    //user.setPermissoes(permissoes);
-		return userRepository.save(user);
+		return modView;
 	}
 	
 	@GetMapping("/list/{id}")

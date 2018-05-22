@@ -5,22 +5,29 @@
 	<head>
 	    <title>Login</title>
 	    <meta charset="utf-8">
-
-	    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
-
-	    <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
-
-	    <link th:href="@{/webjars/font-awesome/css/font-awesome.min.css}" rel="stylesheet"/>
-
-	    <link th:href="@{/resources/templates/estilo.css}" rel="stylesheet"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	    <link rel="stylesheet" href="/resources/templates/templated-hielo/assets/css/main.css"/>
+	    
+	    
 	</head>
 
-	<body style="background-color: #f9f9f9">
-		<h1>Take A Flight v0.2</h1>
+	<body class="subpage">
+		<header id="header">
+				<div class="logo"><a href="index.html">Take a Flight <span>version 0.3</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+			
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Login</a></li>
+					<li><a href="elements.html">Reservas</a></li>
+				</ul>
+			</nav>
 		
-		<div class="btn-group pull-right">
-        	<a class="btn btn-sm btn-primary" th:href="@{/login}" >Login</a>
-        	<a class="btn btn-sm btn-primary" th:href="@{/usuario/}" >Cadastro</a>
+		<div id="main" class="container">
+        	<a class="button special" th:href="@{/login}" >Login</a>
+        	<a class="button" th:href="@{/usuario/}" >Cadastro</a>
       	</div>
 
 		<script th:src="@{/webjars/jquery/jquery.min.js}"></script>

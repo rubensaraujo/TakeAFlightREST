@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 import com.rubensaraujo.TakeaFlight.Security.TakeAFlightUserDetailsService;
 
@@ -20,7 +21,6 @@ public class SecurityWebConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
 		http
         .authorizeRequests()
-        	.antMatchers("/resources/**", "/webjars/**").permitAll()
         	.antMatchers("GET", "/home", "/", "/usuario/").permitAll()
         	.antMatchers("POST", "/usuario/new").permitAll()
         	.anyRequest().authenticated()
@@ -29,6 +29,15 @@ public class SecurityWebConfig extends WebSecurityConfigurerAdapter{
         	.loginPage("/login").permitAll()
 		.and()
 		.rememberMe();
+	}
+	
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/webjars/**", "/images/**", "/css/**", "/js/**", "/fonts/**")
+		.addResourceLocations("classpath:/META-INF/resources/webjars/",
+							  "classpath:/static/images/",
+							  "classpath:/static/css/",
+							  "classpath:/static/js/",
+							  "classpath:/static/fonts/");
 	}
 	
 	@Override

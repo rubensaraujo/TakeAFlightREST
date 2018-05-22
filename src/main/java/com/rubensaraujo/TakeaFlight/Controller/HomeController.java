@@ -2,6 +2,7 @@ package com.rubensaraujo.TakeaFlight.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -16,5 +17,11 @@ public class HomeController {
 	@GetMapping("/login")
 	public String login() {
 		return "login";
+	}
+	
+	@PostMapping("/login")
+	public ModelAndView loginsucesso() {
+		ModelAndView mv = new ModelAndView("/tela_reservas");
+		return mv;
 	}
 }

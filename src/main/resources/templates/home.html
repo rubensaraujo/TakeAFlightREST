@@ -3,32 +3,69 @@
     xmlns:th="http://www.thymeleaf.org"
     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 	<head>
-	    <title>Login</title>
+	    <title>Home - Take a Flight v0.3</title>
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1" />
-	    <link rel="stylesheet" href="/resources/templates/templated-hielo/assets/css/main.css"/>
-	    
-	    
+	    <link href="../static/css/main.css" type="text/css" th:href="@{/css/main.css}" rel="stylesheet"/>
 	</head>
 
 	<body class="subpage">
 		<header id="header">
-				<div class="logo"><a href="index.html">Take a Flight <span>version 0.3</span></a></div>
-				<a href="#menu">Menu</a>
-			</header>
-			
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Login</a></li>
-					<li><a href="elements.html">Reservas</a></li>
-				</ul>
-			</nav>
+			<div class="logo"><a th:href="@{/home}">Take a Flight <span>versão 0.4</span></a></div>
+		</header>
 		
-		<div id="main" class="container">
-        	<a class="button special" th:href="@{/login}" >Login</a>
-        	<a class="button" th:href="@{/usuario/}" >Cadastro</a>
-      	</div>
+		<section id="One" class="wrapper style3">
+			<div class="inner">
+				<header class="align-center">
+					<p>Reservas de Passagens Aereas</p>
+					<h2>Take a Flight</h2>
+				</header>
+			</div>
+		</section>
+		
+		<section id="one" class="wrapper style2">
+			<div class="inner">
+					<div class="grid-style">
+	
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/pic05.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>Login</p>
+										<h2>Já cadastrado?</h2>
+									</header>
+									<p>Se já é cadastrado no sistema, clique abaixo.</p>
+									<footer class="align-center">
+										<a th:href="@{/login}" class="button">Login</a>
+									</footer>
+								</div>
+							</div>
+						</div>
+	
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/pic06.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>Cadastro</p>
+										<h2>Novo no sistema?</h2>
+									</header>
+									<p>Clicando abaixo, você tem acesso ao formulario de inscrição.</p>
+									<footer class="align-center">
+										<a th:href="@{/usuario/}" class="button special">Cadastre-se</a>
+									</footer>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
 
 		<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
 

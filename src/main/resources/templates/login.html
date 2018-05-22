@@ -5,58 +5,72 @@
 	<head>
 	    <title>Login</title>
 	    <meta charset="utf-8">
-
-	    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
-
-	    <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
-
-	    <link th:href="@{/webjars/font-awesome/css/font-awesome.min.css}" rel="stylesheet"/>
-
-	    <link th:href="@{/resources/templates/estilo.css}" rel="stylesheet"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	    <link href="../static/css/main.css" type="text/css" th:href="@{/css/main.css}" rel="stylesheet"/>
 	</head>
 
-	<body style="background-color: #f9f9f9">
-		<div class="row">
+	<body class="subpage">
+		
+		<header id="header">
+			<div class="logo"><a th:href="@{/home}">Take a Flight <span>versão 0.4</span></a></div>
+		</header>
+		
+		<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Take a Flight</p>
+						<h2>Login</h2>
+					</header>
+				</div>
+		</section>
+		
+		<section id="two" class="wrapper style2">
+				
 			<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
 				<div th:if="${param.error}">
-					<div class="alert alert-danger"
-					   th:text="${session.SPRING_SECURITY_LAST_EXCEPTION.message} + ': Usuário e(ou) senha inválidos!'">Usuário e(ou) senha inválidos!</div>
+					<div th:text="${session.SPRING_SECURITY_LAST_EXCEPTION.message} + ': Usuário e(ou) senha inválidos!'">Usuário e(ou) senha inválidos! </div>
 				</div>
+			</div>	
 
-				<div th:if="${param.logout}">
-					<div class="alert alert-info">Até logo!</div>
-				</div>
-
-				<div class="panel panel-info">
-					<div class="panel-heading">
-				    	<h3 class="panel-title">ENTRE</h3>
-				  	</div>
-					<div class="panel-body">
-						<form th:action="@{/login}" method="post">
-							<div class="form-group">
-								<input name="username" class="form-control" placeholder="Usuário"/>
-							</div>
-
-							<div class="form-group">
-								<input type="password" name="password" class="form-control" placeholder="Senha"/>
-							</div>
-
-							<div class="form-group">
-								<button class="btn btn-primary btn-block">Entrar</button>
-							</div>
-
-							<div class="form-group">
-								<input type="checkbox" id="remember-me" name="remember-me" />
-								<label for="remember-me">Lembrar?</label>
-							</div>
-						</form>
-					</div>
-				</div>
+			<div th:if="${param.logout}">
+				<div class="alert alert-info">Até logo!</div>
 			</div>
-		</div>
+
+				
+				 
+		 	<div class="inner">
+		 		<div class="box">
+ 					<div class="content">
+						<h2>ENTRE</h2>
+						<form th:action="@{/login}" method="post">
+							<div class="row uniform">		
+								<div class="6u 12u$(xsmall)">
+									<input name="username" type="text"     placeholder="Usuário"/>
+									<input type="password" name="password" placeholder="Senha"/>
+								</div>
+								
+								<div class="12u$">
+									<button class="button special">Entrar</button>
+									<input type="checkbox" id="remember-me" name="remember-me" />
+									<label for="remember-me">Lembrar?</label>
+								</div>	
+							</div>		
+						</form>	
+					</div>	
+			 	</div>
+			 </div>	
+		</section>
+		
 
 		<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
 
 		<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+		
+		<script th:src="@{/js/jquery.min.js}"></script>
+		<script th:src="@{/js/jquery.scrollex.min.js}"></script>
+		<script th:src="@{/js/skel.min.js}"></script>
+		<script th:src="@{/js/util.js}"></script>
+		<script th:src="@{/js/main.js}"></script>
+		
 	</body>
 </html>

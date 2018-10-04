@@ -3,9 +3,10 @@
 Projeto da disciplina de Programação Distribuída, do curso de Bacharelado em Tecnologia da Informação do IMD - UFRN, semestre 2018.1
 
 ## O que é?
-
+A descrição do projeto consistia em: *Implemente um serviço de reserva de passagem onde clientes podem solicitar a reserva de uma passagem especificando o trecho (origem e destino), data e se deseja voo direto ou não. Pelo menos 3 empresas aéreas devem registrar diferentes trechos de voos que podem ser consultados pelos clientes.*
+Implementei este projeto utilizando a linguagem Java
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MzI4NTIwNF19
+eyJoaXN0b3J5IjpbOTg4MzgyODg1XX0=
 -->

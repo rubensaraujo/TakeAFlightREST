@@ -21,11 +21,13 @@ O projeto atualmente se encontra **incompleto**, e deve contar com as seguintes 
  - [ ] Gerenciar voos
  
  - Administrador
- - [ ] Cadastrar comp 
+ - [ ] Cadastrar companhia aérea
+ - [ ] Gerenciar Companhia Aérea
+ - [ ] Popular bancos 
 
  
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NDY5Nzk4OF19
+eyJoaXN0b3J5IjpbODA4NTEyMjY2XX0=
 -->

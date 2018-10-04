@@ -16,11 +16,16 @@ O projeto atualmente se encontra **incompleto**, e deve contar com as seguintes 
  - [ ] Editar usuário
  
  - Companhia Aérea:
- - [ ] Cadastra
+ - [ ] Cadastrar trechos
+ - [ ] Cadastrar voos
+ - [ ] Gerenciar voos
+ 
+ - Administrador
+ - [ ] Cadastrar comp 
 
  
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NTcxMjE5Ml19
+eyJoaXN0b3J5IjpbMTY1NDY5Nzk4OF19
 -->

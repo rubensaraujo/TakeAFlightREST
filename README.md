@@ -7,11 +7,16 @@ A descrição do projeto consistia em: *Implemente um serviço de reserva de pas
 Implementei este projeto utilizando a linguagem Java, além de utilizar REST e Spring.
 
 ## Status
-O projeto atualmente se encontra incompleto, com as seguintes funcionalidade:
+O projeto atualmente se encontra incompleto, com as seguintes funcionalidades:
 
+ - [ ] TEs
+ - [ ] 
+ - [ ] 
+ - [ ] List item
 
+ 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNjczNzk4M119
+eyJoaXN0b3J5IjpbMTAzNzIyMDQ3OV19
 -->

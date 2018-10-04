@@ -25,9 +25,13 @@ O projeto atualmente se encontra **incompleto**, e deve contar com as seguintes 
  - [ ] Gerenciar Companhia Aérea
  - [ ] Popular bancos 
 
+## Como importar e executar
+
+Em breve...
+
  
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA4NTEyMjY2XX0=
+eyJoaXN0b3J5IjpbLTE3MDE5MzA0NDBdfQ==
 -->

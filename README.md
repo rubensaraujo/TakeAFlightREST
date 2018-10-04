@@ -7,18 +7,20 @@ A descrição do projeto consistia em: *Implemente um serviço de reserva de pas
 Implementei este projeto utilizando a linguagem Java, além de utilizar REST e Spring.
 
 ## Funcionalidades
-O projeto atualmente se encontra **incompleto**, e deve com as seguintes funcionalidades:
+O projeto atualmente se encontra **incompleto**, e deve contar com as seguintes funcionalidades, ao longo do desenvolvimento:
 
  - Usuário:
  - [x] Cadastro e login de usuários
  - [x] Lista de Passagens aéreas
  - [ ] Reserva de passagens aéreas
  - [ ] Editar usuário
- - [ ] 
+ 
+ - Companhia Aérea:
+ - [ ] Cadastra
 
  
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1Njc1NzYyN119
+eyJoaXN0b3J5IjpbMTc0NTcxMjE5Ml19
 -->
